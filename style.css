@@ -31,22 +31,7 @@ div.overlay {
   top: 0;
   width: 100%; }
 
-div.overlay > div.loginContainer {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  background-color: #0e1a3525;
-  border-radius: 2px;
-  padding: 6px;
-  width: 500px;
-  text-align: center; }
-
-div.overlay > div.loginContainer > div.loginForm {
-  background-color: #f6f7fa;
-  border-radius: 5px;
-  padding: 24px;
-  position: relative; }
-
+.regForm form,
 .loginForm form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,14 +41,17 @@ div.overlay > div.loginContainer > div.loginForm {
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.loginForm input {
+input {
   padding: 15px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  border: 1px solid #122143; }
 
+.regForm input:focus,
 .loginForm input:focus {
   outline: 1px solid #122143; }
 
-.loginForm button {
+.loginForm button,
+.regForm button {
   color: white;
   font-size: 13px;
   font-weight: bold;
@@ -75,19 +63,16 @@ div.overlay > div.loginContainer > div.loginForm {
   margin: 0 auto;
   outline: 0; }
 
+.regForm button:hover,
 .loginForm button:hover {
   -webkit-transition: 1s linear;
   -o-transition: 1s linear;
   transition: 1s linear;
   background-color: #4164c2; }
 
-div.overlay > div.loginContainer > div.loginForm > h3 {
-  color: #0e1a35;
-  font-size: 21px;
-  margin: 0 0 25px;
-  font-weight: normal; }
-
-/* REGFORM */
+div.organizeOverlay,
+div.analyticsOverlay,
+div.manageOverlay,
 div.regOverlay {
   background-color: #0e1a3525;
   bottom: 0;
@@ -102,7 +87,11 @@ div.regOverlay {
   top: 0;
   width: 100%; }
 
-div.regOverlay > div.regContainer {
+div.organizeOverlay > div.organizeContainer,
+div.analyticsOverlay > div.analyticsContainer,
+div.manageOverlay > div.manageContainer,
+div.regOverlay > div.regContainer,
+div.overlay > div.loginContainer {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
@@ -112,158 +101,21 @@ div.regOverlay > div.regContainer {
   width: 500px;
   text-align: center; }
 
-div.regOverlay > div.regContainer > div.regForm {
+div.organizeOverlay > div.organizeContainer > div.organizeForm,
+div.analyticsOverlay > div.analyticsContainer > div.analyticsForm,
+div.manageOverlay > div.manageContainer > div.manageForm,
+div.regOverlay > div.regContainer > div.regForm,
+div.overlay > div.loginContainer > div.loginForm {
   background-color: #f6f7fa;
   border-radius: 5px;
   padding: 24px;
   position: relative; }
 
-.regForm form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-
-.regForm input {
-  padding: 15px;
-  margin-bottom: 20px; }
-
-.regForm input:focus {
-  outline: 1px solid #122143; }
-
-.regForm button {
-  color: white;
-  font-size: 13px;
-  font-weight: bold;
-  width: 200px;
-  padding: 12px 39px;
-  background-color: #5584ff;
-  border-radius: 100px;
-  border: 0;
-  margin: 0 auto;
-  outline: 0; }
-
-.regForm button:hover {
-  -webkit-transition: 1s linear;
-  -o-transition: 1s linear;
-  transition: 1s linear;
-  background-color: #4164c2; }
-
-div.regOverlay > div.regContainer > div.regForm > h3 {
-  color: #0e1a35;
-  font-size: 21px;
-  margin: 0 0 25px;
-  font-weight: normal; }
-
-/* MANAGE FORM */
-div.manageOverlay {
-  background-color: #0e1a3525;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%; }
-
-div.manageOverlay > div.manageContainer {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  background-color: #0e1a3525;
-  border-radius: 2px;
-  padding: 6px;
-  width: 500px;
-  text-align: center; }
-
-div.manageOverlay > div.manageContainer > div.manageForm {
-  background-color: #f6f7fa;
-  border-radius: 5px;
-  padding: 24px;
-  position: relative; }
-
-div.manageOverlay > div.manageContainer > div.manageForm > h3 {
-  color: #0e1a35;
-  font-size: 21px;
-  margin: 0 0 25px;
-  font-weight: normal; }
-
-/* ANALYTICS FORM */
-div.analyticsOverlay {
-  background-color: #0e1a3525;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%; }
-
-div.analyticsOverlay > div.analyticsContainer {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  background-color: #0e1a3525;
-  border-radius: 2px;
-  padding: 6px;
-  width: 500px;
-  text-align: center; }
-
-div.analyticsOverlay > div.analyticsContainer > div.analyticsForm {
-  background-color: #f6f7fa;
-  border-radius: 5px;
-  padding: 24px;
-  position: relative; }
-
-div.analyticsOverlay > div.analyticsContainer > div.analyticsForm > h3 {
-  color: #0e1a35;
-  font-size: 21px;
-  margin: 0 0 25px;
-  font-weight: normal; }
-
-/* ORGANIZE FORM */
-div.organizeOverlay {
-  background-color: #0e1a3525;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%; }
-
-div.organizeOverlay > div.organizeContainer {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  background-color: #0e1a3525;
-  border-radius: 2px;
-  padding: 6px;
-  width: 500px;
-  text-align: center; }
-
-div.organizeOverlay > div.organizeContainer > div.organizeForm {
-  background-color: #f6f7fa;
-  border-radius: 5px;
-  padding: 24px;
-  position: relative; }
-
-div.organizeOverlay > div.organizeContainer > div.organizeForm > h3 {
+div.organizeOverlay > div.organizeContainer > div.organizeForm > h3,
+div.analyticsOverlay > div.analyticsContainer > div.analyticsForm > h3,
+div.manageOverlay > div.manageContainer > div.manageForm > h3,
+div.regOverlay > div.regContainer > div.regForm > h3,
+div.overlay > div.loginContainer > div.loginForm > h3 {
   color: #0e1a35;
   font-size: 21px;
   margin: 0 0 25px;
@@ -460,16 +312,17 @@ header .button {
 #slider .container {
   padding: 0 8%;
   margin: 0 auto;
-  max-width: 1400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  max-width: 1400px; }
+  #slider .container .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
 
 #slider h2 {
   color: white;
@@ -493,8 +346,10 @@ header .button {
   -webkit-box-shadow: 0 0 10px 5px #27479088;
   box-shadow: 0 0 10px 5px #27479088; }
 
-#slider .sliderImg {
-  margin-right: 8%; }
+#slider img.sliderImg {
+  margin-right: 8%;
+  max-width: 50%;
+  height: auto; }
 
 /* /////////////////////////////////////////////////////////////////////////////////////// TEMPLATE */
 #template {
@@ -647,7 +502,7 @@ footer .contacts {
 
 /* //////////////////////////////////////////////////////////////////////////////////////////////// */
 @media screen and (max-width: 1100px) {
-  #slider .container {
+  #slider .item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -655,7 +510,8 @@ footer .contacts {
     text-align: center; }
 
   img.sliderImg {
-    max-width: 99%; } }
+    margin: 0 5%;
+    min-width: 100%; } }
 @media screen and (max-width: 960px) {
   #browser {
     padding-top: 0; }
